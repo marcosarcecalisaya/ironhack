@@ -1,5 +1,0 @@
-    a="Have a nice day."
-    b=a.split()
-    print "caca de la vaca"
-
-
