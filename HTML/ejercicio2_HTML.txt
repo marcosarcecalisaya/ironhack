@@ -1,0 +1,10 @@
+Google clone
+
+Let's copy the layout of a page we all know and love: http://www.google.com.
+
+Google
+
+For this exercise treat the search box as a simple <div>. Don't forget to add the borders and the microphone inside it. ;)
+
+Also, it's okay for the <footer> to not stick perfectly to the bottom of the browser like Google's does.
+

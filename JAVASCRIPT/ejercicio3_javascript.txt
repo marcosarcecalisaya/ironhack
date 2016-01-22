@@ -1,0 +1,13 @@
+DOM Exercise: To-Do List
+
+Time to start practicing manipulating the DOM! In this exercise, you are going to make a To-Do list for yourself.
+
+Download the exercise files and open index.html.
+
+You’ll see that you have the HTML for a list. I’ve already added some items for you! But as you can see, the ‘Save’ and ‘Done’ buttons don’t do anything (yet).
+
+Your job is to write the functions that will make the buttons useful.
+
+The ‘Save’ button should take the value from the input field and add it as a new li to the To-Do list.
+
+The ‘Done’ button should remove the first list item from the To-Do list and add it to the Done list. Remember to add the correct class to get the strikethrough.

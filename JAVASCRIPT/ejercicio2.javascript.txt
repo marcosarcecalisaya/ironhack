@@ -1,0 +1,67 @@
+Mars Rover Kata
+
+We are sending a rover to Mars and we need to program its movements so that we can send it commands from Earth.
+
+The rover is on a 10 x 10 grid The rover will have starting x,y coordinates (ie. 0,0) and the direction it is facing (N,E,S,W) The rover needs to be able to execute the following commands:
+
+    go forward
+    go back
+    turn left
+    turn right
+
+Start by downloading the Mars Rover files. Open the index.html file and then open your console. You should be able to see the results of any console.log() functions here.
+
+The Exercise
+
+    Create an object to represent the rover that has position and direction attributes
+    Create a grid using arrays (hint: do a google search for two-dimensional arrays).
+    Write functions for the various commands
+    Try to call some of those functions and display the new position of the rover.
+
+For example, you could start with this:
+
+var Rover = {
+  position: [0,0], 
+  direction: 'N'
+}
+
+function goForward(rover) {
+  switch(rover.direction) {
+    case 'N':
+      rover.position[0]++
+      break;
+    case 'E':
+      rover.position[1]++
+      break;
+    case 'S':
+      rover.position[0]--
+      break;
+    case 'W':
+      rover.position[1]--
+      break;
+  }
+}
+goForward(myRover);
+
+Iteration 2
+
+We want to be able to send a series of commands to the rover and have it execute them in sequence.
+
+We will send an array of character commands, which can include:
+
+    f for go forward
+    b for go back
+    r for turn right
+    l for turn left
+
+So we should be able to tell the rover, for example, ‘fffrfflfffbb’ and it would execute those movements and provide us with its new position.
+
+Furthermore, we need to make sure that the rover never goes off the grid but rather, wraps from one edge of the grid to another (planets are spheres after all)
+Bonus
+
+    In your 10 x 10 grid, place some obstacles that the rover cannot cross or land on
+    Implement obstacle detection. The rover should execute the given commands until it reaches an obstacle, then stop at the last possible position and report the obstacle.
+
+Extra hardcore super bonus
+
+Our rover is lonely! We need to send another one that can roam on the same grid and execute the same commands. Make sure the rovers don’t bump into each other.

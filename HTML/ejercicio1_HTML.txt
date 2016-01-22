@@ -1,0 +1,47 @@
+A site for your favourite movie
+
+In this first exercise, you're going to make a website for your favourite movie. Use Sublime Text to create the HTML and CSS files for the site.
+
+You must use at least one of each of the following HTML tags on your film's page:
+
+    <section>
+    <p>
+    <h1>
+    <h2>
+    <h3>
+    <ul>
+    <li>
+    <strong>
+    <em>
+    <img>
+    <a>
+
+Use the following mockups as a guide, but feel free to change the structure to fit your favourite movie. In this exercise you have 3 mockups.
+
+    Start creating an <article> that will contain all your relevant info. This <article> will be 1000px by 1000px, and centered. It's important to use <article>, <header>, <footer> and <aside> tags instead of <div> because of SEO (short for search engine optimization). Get used to working with them, but don't worry about using them properly for now. Use the mockup Basic 1.png as your guide for this step.
+    Add <header> and <footer>, each with width 100% and height 100px. Put the <header> before the <article> and <footer> after the <article>. Use the mockup Basic 2.png as your guide for this step.
+    Add three containers inside in the main <article>, with the sizes and structure shown in Basic 2.png.
+    As seen in Basic 3.png, the containers inside <article> will have an image, a title, text and an <aside>. Fill them with your movie's information.
+    Finish by adding a title to your <header> and a signature to your <footer>.
+
+Keep it simple. Focus more on good HTML structure and less on CSS styling for now. We’ll cover that later.
+Tips:
+
+    Use Sublime Text to create a film.html file somewhere on your computer.
+    Open the file in Google Chrome instead of another browser.
+    Use Chrome Dev Tools to quickly experiment with changes to your CSS code.
+    When making changes to the source code, remember to save the files in Sublime before refreshing the page in Chrome.
+    Remember where you saved and don't delete film.html, you will be using it later.
+
+HTML and CSS files connection using Sublime:
+
+    Create a new html file, eg: film.html
+    Create a new css file, eg: film.css
+    Link them with the following code in the .html file <link rel="stylesheet" href="path/to/film.css">
+
+File paths
+
+    If it's inside the same folder: <link rel="stylesheet" href="film.css">
+    If it's inside a subfolder: <link rel="stylesheet" href="subfolder_name/film.css">
+
+These are the most common, but if it's another place, you can go up in the path and enter in another folder, eg: <link rel="stylesheet" href="../../another_folder/film.css">. The ../ refers to the parent folder.
