@@ -1,27 +1,32 @@
-
-class MilkShake
+class Agregado
   attr_reader :name, :price
+  attr_accessor :base_price
   
   def initialize
     @base_price = 3
-    @ingredients= [ ]
-    @price=price
+    @components= [ ]
+    @price = price
+    @name = name
   end
 
-  def add_ingredient(ingredient)
-    @ingredients.push(ingredient)
+  def add(component)
+    @components.push(component)
   end
 
   def price
-    #Let's establish what our counter should be before we start adding ingredients into the mix
-    total_price_of_milkshake = @base_price
-    #Add each ingredients price to our total
-    @ingredients.each do |ingredient|
-      total_price_of_milkshake += ingredient.price
+    total= @base_price
+    @components.each do |component|
+      total += component.price
     end
-    #return  our total price to whoever called for it
-    total_price_of_milkshake
+    total
   end
+
+end
+
+class MilkShake < Agregado
+end
+
+class ShackShop < Agregado
 end
 
 
@@ -34,48 +39,25 @@ class Ingredient
   end
 end
 
-
-class ShackShop
-
-  attr_reader :name, :price
-  
-  def initialize
-    @base_price = 5
-    @milkshakes= [ ]
-  end
-
-  def add_milkshake(milkshake)
-    @milkshakes.push(milkshake)
-  end
-
-  def checkout
-    #Let's establish what our counter should be before we start adding ingredients into the mix
-    total_price_order = @base_price
-    #Add each ingredients price to our total
-    @milkshakes.each do |milkshake|
-      total_price_order += milkshake.price     
-    end
-    #return  our total price to whoever called for it
-    total_price_order
-  end
-end 
-
+#MilkShake 1
 nizars_milkshake = MilkShake.new
 banana = Ingredient.new("Banana", 2)
 chocolate_chips = Ingredient.new("Chocolate Chips", 1)
-nizars_milkshake.add_ingredient(banana)
-nizars_milkshake.add_ingredient(chocolate_chips)
+nizars_milkshake.add(banana)
+nizars_milkshake.add(chocolate_chips)
 
+#MilkShake 2
 milkshake2=MilkShake.new
 cocoa = Ingredient.new("Cocoa", 6)
 pistacho = Ingredient.new("Pistacho", 7)
-milkshake2.add_ingredient(cocoa)
-milkshake2.add_ingredient(pistacho)
+milkshake2.add(cocoa)
+milkshake2.add(pistacho)
 
-
+puts nizars_milkshake.price
 puts milkshake2.price
 
-pedido=ShackShop.new
-pedido.add_milkshake(nizars_milkshake)
-pedido.add_milkshake(milkshake2)
-puts pedido.checkout
+#Order
+order =ShackShop.new
+order.add(nizars_milkshake)
+order.add(milkshake2)
+puts order.price
